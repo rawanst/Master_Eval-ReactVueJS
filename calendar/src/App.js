@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <div className="d-flex justify-content-center mt-3">
-        <h1>Calendar</h1>
+        <h1 className='row text-white bg-dark p-2 rounded'>Calendar</h1>
       </div>
       <Calendar />
     </>

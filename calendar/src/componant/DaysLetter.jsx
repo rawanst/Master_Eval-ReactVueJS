@@ -1,5 +1,4 @@
-export const DaysLetter = () => <div className="container-sm" style={{"maxWidth":"600px", 'marginTop':'50px'}}>
-    
+export const DaysLetter = () => <div className="container-sm" style={{"maxWidth":"600px", "marginTop": "20px", "marginBottom":"-5px"}}>
         <div className="row text-white bg-dark p-2 rounded-top">
             <div className="col">L</div> 
             <div className="col">M</div> 

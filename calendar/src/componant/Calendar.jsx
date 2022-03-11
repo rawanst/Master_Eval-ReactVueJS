@@ -14,24 +14,26 @@ export function Calendar () {
     const months = ['Janvier','Fevrier','Mars','Avril','Mai','Juin','Juillet','Aout','Septembre','Octobre','Novembre','Decembre'];
     
     return <>
-        <div className="d-flex justify-content-center">
+        <div className="d-flex justify-content-center" style={{"marginTop":"-8px"}}>
             <p>Aujourd'hui: {now.format("DD")} {months[Number(now.format("MM"))-1]} {now.format("YYYY")}</p> 
         </div>
 
         <div className='container'>
-            <div className="d-flex justify-content-center">
+            <div className="mb-1 d-flex justify-content-center">
                 <button 
                     type="button" 
                     className="btn btn-dark btn-sm" 
-                    style={{'margin':'2px'}}
                     onClick={() => setNow(now.clone().subtract(1,'month'))}>
                         {`<<`}
                 </button>
-                <p>{months[Number(now.format("MM"))-1]}</p> 
+                <div 
+                    className='d-flex justify-content-center' 
+                    style={{'width':'100px', 'height':'10px'}}>
+                        <p>{months[Number(now.format("MM"))-1]}</p>
+                </div> 
                 <button 
                     type="button" 
                     className="btn btn-dark btn-sm" 
-                    style={{'margin':'2px'}}
                     onClick={() => setNow(now.clone().add(1,'month'))}>
                         {`>>`}
                 </button>
@@ -39,16 +41,18 @@ export function Calendar () {
             <div className="d-flex justify-content-center">
                 <button
                     type="button" 
-                    className="btn btn-dark btn-sm" 
-                    style={{'margin':'2px'}}
+                    className="btn btn-dark btn-sm"
                     onClick={() => setNow(now.clone().subtract(1,'day'))}>
                         {`<<`} 
                 </button>
-                <p>{now.format("DD")}</p> 
+                <div 
+                    className='d-flex justify-content-center ' 
+                    style={{'width':'100px', 'height':'10px'}}>
+                        <p>{now.format("DD")}</p> 
+                </div> 
                 <button 
                     type="button" 
                     className="btn btn-dark btn-sm" 
-                    style={{'margin':'2px'}}
                     onClick={() => setNow(now.clone().add(1,'day'))}>
                         {`>>`}
                 </button>
